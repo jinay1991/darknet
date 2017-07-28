@@ -625,7 +625,8 @@ void test_detector(char *datacfg, char *cfgfile, char *weightfile, char *filenam
 		//else if (nms) do_nms_sort(boxes, probs, l.w*l.h*l.n, l.classes, nms);
 
 #if 1
-		for (int i = 0; i < l.w*l.h*l.n; i++)
+		int i = 0;
+		for (i = 0; i < l.w*l.h*l.n; i++)
 		{
 			box b = boxes[i];
 			int left = (b.x - b.w / 2.) * im.w;
